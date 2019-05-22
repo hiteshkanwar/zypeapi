@@ -1,4 +1,4 @@
-development:
+production:
   host: localhost
   adapter: postgresql
   encoding: unicode
