@@ -1,0 +1,31 @@
+<% @videos.each_slice(3).to_a.each_with_index do |videos_group, indx1| %>
+  <div class="card-deck" id="row_<%= 1 + indx1/3 %>">
+    <% videos_group.each_with_index do |video, indx2| %>
+      <div class="card" id="video_<%= video._id %>">
+        <div class="card-body">
+          <div class="row img_and_data">
+            <div class="col-4 image">
+              <img src="<%= video.thumbnails.first['url'] %>" width="100%" data-id="<%= video._id %>">
+            </div>
+            <div class="col-8 title_desc">
+              <code class="title" data-id="<%= video._id %>"><%= truncate(video.title, length: 30) %></code>
+              <p class="short_description"><%= truncate(video.short_description, length: 200)  %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% end %>
+<div class="row">
+  <div class="col-6 text-left">
+    <% if @pagination['previous'].to_i > 0 %>
+      <%= link_to "<< Prev", videos_path(page: @pagination['previous']), class: 'btn btn-warning', 'data-remote': true %>
+    <% end %>
+  </div>
+  <div class="col-6 text-right">
+    <% if @pagination['next'].to_i > params[:page].to_i %>
+      <%= link_to "Next >>", videos_path(page: @pagination['next']), class: 'btn btn-info', 'data-remote': true %>
+    <% end %>
+  </div>
+</div>

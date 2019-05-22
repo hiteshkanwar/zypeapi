@@ -1,0 +1,17 @@
+<div class="container video_popup" id="popup_<%= @video._id %>">
+  <button type="button" class="close cancel-btn" data-dismiss="modal">&times;</button>
+  <div class="card" id="video_<%= @video._id %>">
+    <div class="card-body">
+      <div class="row img_and_data">
+        <div class="col-8 image">
+          <div id="zype_<%= @video.youtube_id %>"></div>
+          <script src="https://player.zype.com/embed/<%= @video.youtube_id %>.js?autoplay=true&app_key=<%= ENV.fetch('ZYPE_APP_KEY') %>" type="text/javascript"></script>
+        </div>
+        <div class="col-4 title_desc">
+          <code class="title" data-id="<%= @video._id %>"><%= @video.title %></code>
+          <p class="description"><%= @video.description  %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

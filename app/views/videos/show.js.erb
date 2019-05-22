@@ -1,0 +1,3 @@
+$(".container.video_popup").hide('slow').remove()
+$("#video_<%= @video._id %>").parent('div.card-deck').after("<%= j(render partial: 'video') %>")
+$("#popup_<%=@video._id%>").show('slow')

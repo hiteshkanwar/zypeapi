@@ -1,0 +1,62 @@
+@import "bootstrap";
+
+.cancel-btn {
+    position: absolute;
+    z-index: 999;
+    right: -5px;
+    width: 30px;
+    height: 30px;
+    background-color: #4a6cea !important;
+    border-radius: 100%;
+    opacity: 1;
+    color: #fff;
+    top: 6px;
+}
+.card-body{
+    padding: 5px !important;
+  }
+  @media (min-width: 576px) {
+   .card-deck {
+      flex-flow: row wrap;
+      margin: 10px -15px;
+    }
+    .card-deck .card{
+      /*display: none;*/
+      display: flex;
+      flex: 1 0 0%;
+      flex-direction: column;
+      margin-right: 15px;
+      margin-bottom: 0;
+      margin-left: 15px;
+      height: 120px;
+      background-color: #fff;
+    }
+    .card-deck .card .image{
+      margin: auto 0;
+      padding: auto 2px;
+      cursor: pointer;
+    }
+    .card-deck .card .title_desc{
+      margin: auto 0;
+      padding: auto 2px;
+    }
+  }
+  body {
+    background: #e4e4e4;
+  }
+  code.title{
+    font-size: 10px;
+    font-weight: bold;
+    border-bottom: 1px solid;
+    cursor: pointer;
+  }
+  p.short_description{
+    font-size: 10px;
+    overflow: truncate;
+  }
+  .video_popup.container {
+    padding: 20px 0;
+    display: none;
+    font-size: 14px !important;
+    position: relative;
+  }

@@ -1,0 +1,9 @@
+development:
+  host: localhost
+  adapter: postgresql
+  encoding: unicode
+  username: root
+  password: 12345678
+  pool: 5
+  database: zype_app_development
+
