@@ -17,7 +17,7 @@
 //= require_tree .
 
 $(document).on("click", '.image img, .title_desc code.title', function(e){
-    $.get(`/videos/${$(event.target).data('id')}`)
+    $.get("/videos/"+$(event.target).data('id'))
   });
 
 $(document).on("click", '.cancel-btn', function(e){
